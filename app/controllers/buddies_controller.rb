@@ -37,4 +37,14 @@ class BuddiesController < ApplicationController
     @buddy.destroy
     redirect_to buddies_path
   end
+
+  private
+
+  def set_buddy
+    @buddy = Buddy.find(params[:id])
+  end
+
+  def buddy_params
+    params.require(:buddy).permit(:name, :description, :price, :category, :photo, :address)
+  end
 end
