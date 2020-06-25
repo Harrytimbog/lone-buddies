@@ -1,0 +1,17 @@
+.button {
+  border: transparent;
+  border-radius: 60px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #A0384D;
+  padding: 16px;
+  min-width: 50px;
+  margin: 1px;
+}
+
+.button:hover {
+  opacity: 0.75;
+  color: #FFF;
+}

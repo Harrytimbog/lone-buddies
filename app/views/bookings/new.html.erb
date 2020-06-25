@@ -1,2 +1,18 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<div class="container">
+  <div class="col-md-12">
+    <br>
+    <h1>Place a new Booking</h1>
+    <div class="testing-card-product">
+      <div class="product-img"style="background-image: url('<%= @buddy.photo %>')"></div>
+      <div class="testing-card-product-infos">
+        <h2><%= @buddy.name.capitalize %></h2>
+        <p><%= @buddy.description %></p>
+        <%= simple_form_for [@buddy, @booking] do |f| %>
+          <%= f.input :start_on, label: 'From', as: :string, input_html: {type: :date} %>
+          <%= f.input :end_on, label: 'To', as: :string, input_html: {type: :date} %>
+          <%= f.button :submit, 'Book your meeting now!', class: "button", data: {confirm: "Click OK if you'd like to confirm this booking!"}%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

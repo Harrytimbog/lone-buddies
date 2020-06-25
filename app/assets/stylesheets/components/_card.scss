@@ -1,0 +1,39 @@
+.testing-card-product {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  margin: 100px;
+}
+
+.product-img {
+  min-width: 300px;
+  background-size: cover;
+  background-position: center;
+  width: 50%
+}
+
+.testing-card-product h2 {
+  font-size: 40px;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+.testing-card-product h3 {
+  font-size: 22px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+.testing-card-product p {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 18px;
+  line-height: 1.5;
+  opacity: 1;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.testing-card-product .testing-card-product-infos {
+  padding: 32px;
+}

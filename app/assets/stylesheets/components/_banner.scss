@@ -1,0 +1,46 @@
+.photo-margin {
+  background-color: #FFFFFF;
+  height: 30px;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 250px;
+}
+
+.banner h1 {
+  color: #E1B91B;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 40px;
+  text-align: center;
+  margin-left: 1.5em;
+}
+
+.banner p {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.banner-button {
+  border: transparent;
+  border-radius: 60px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #E1B91B;
+  height: 50px;
+  width: 176px;
+}
+
+.button:hover {
+  opacity: 0.75;
+  color: #FFF;
+}

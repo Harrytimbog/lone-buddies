@@ -1,2 +1,20 @@
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
+<div class="container">
+  <div>
+    <h1>bookings for meetups with buddy</h1>
+      <br>
+      <br>
+      <div class='buddy_list'>
+        <% @bookings.each do |booking| %>
+          <%= render "shared/booking_card", booking: booking %>
+        <% end %>
+      </div>
+      <br>
+      <form class="form-inline">
+      <br>
+       <!--  <p><%= link_to "All bookings", bookings_path, class: "button" %></p>
+ -->        <br>
+      <!--   <p><%= link_to "Add your buddy", new_buddy_path, class: "btn btn-primary " %></p> -->
+        <br>
+        </form>
+    </div>
+</div>

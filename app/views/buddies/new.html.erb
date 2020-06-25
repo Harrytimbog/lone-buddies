@@ -1,2 +1,16 @@
-<h1>Buddies#new</h1>
-<p>Find me in app/views/buddies/new.html.erb</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <h1>Add your Buddy here:</h1>
+      <%= simple_form_for [@buddy] do |f|  %>
+        <%= f.input :name, label: 'What is your buddy\'s name?' %>
+        <%= f.input :description, label: 'How would you describe your buddy?' %>
+        <%= f.input :category, label: "What's the category of the buddy?"  %>
+        <%= f.input :age, label: "What's your buddie's age?" %>
+        <%= f.file_field :photo, label: 'Add a photo url' %>
+        <%= f.input :address, label: 'Where is your buddy\'s location' %>
+        <%= f.submit "Add your buddy!", class: "button"%>
+      <% end %>
+    </div>
+  </div>
+</div>

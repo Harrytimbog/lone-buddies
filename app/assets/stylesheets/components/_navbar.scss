@@ -1,12 +1,109 @@
-.navbar-lewagon {
+.navbar {
+  background-color: #E1B91B;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  background: white;
+  height: 100px;
+  padding: 0px 25px ;
+  color: #FFFFF4;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-links, .navbar-profile {
+  display: flex;
+  align-items: center;
+}
+.navbar-links a, .navbar-profile a {
+  color: #10375c;
+  opacity: 1;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  padding: 0px 10px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-links a:hover, .navbar-profile a:hover {
+  opacity: 0.75;
 }
+
+.navbar .fa-heart {
+  color: #A0384D;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 70px;
+  padding: 10px;
+}
+
+/// DROPDOWN
+
+
+  /* Navbar container */
+  .navbar-banana {
+    overflow: hidden;
+    background-color: #FFAB96;
+  }
+
+  /* Links inside the navbar */
+  .navbar-banana a {
+    float: left;
+    font-size: 16px;
+    color: #FFFFF4;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  /* The dropdown container */
+  .dropdown-banana {
+    float: left;
+    overflow: hidden;
+  }
+
+  /* Dropdown button */
+  .dropdown-banana .dropbtn {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: #10375c;
+    background-color: #E1B91B;
+    padding: 14px 16px;
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+
+  .navbar-banana a:hover, .dropdown-banana:hover .dropbtn {
+    background-color: #E1B91B;
+  }
+
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: #10375c;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: #A0384D;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background: #FFAB96;
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown-banana:hover .dropdown-content {
+    display: block;
+  }

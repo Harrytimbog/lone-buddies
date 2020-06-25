@@ -2,7 +2,7 @@ class BuddiesController < ApplicationController
   before_action :set_buddy, only: [:show, :edit, :update, :destroy]
 
   def index
-    @buddy = Buddy.all.order(created_at: :desc)
+    @buddies = Buddy.all.order(created_at: :desc)
   end
 
   def show
@@ -16,7 +16,7 @@ class BuddiesController < ApplicationController
     @buddy = Buddy.new(buddy_params)
     @buddy.owner = current_user
     if @buddy.save
-      redirect_to buddy_path(@buddy)
+      redirect_to buddy_path(@buddy), notice: 'Buddy was successfully created'
     else
       render :new
     end
@@ -27,15 +27,15 @@ class BuddiesController < ApplicationController
 
   def update
     if @buddy.update(buddy_params)
-      redirect_to buddy_path(@buddy)
+      redirect_to buddy_path(@buddy), notice: 'Buddy was successfully updated.'
     else
-      render 'edit'
+      redirect_to @restaurant
     end
   end
 
   def destroy
     @buddy.destroy
-    redirect_to buddies_path
+    redirect_to buddies_path, notice: "Buddy was successfully destroyed"
   end
 
   private
@@ -45,6 +45,6 @@ class BuddiesController < ApplicationController
   end
 
   def buddy_params
-    params.require(:buddy).permit(:name, :description, :price, :category, :photo, :address)
+    params.require(:buddy).permit(:name, :description, :age, :category, :photo, :address)
   end
 end

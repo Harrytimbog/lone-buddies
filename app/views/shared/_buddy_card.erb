@@ -1,0 +1,10 @@
+<div class="buddy_card">
+  <div class="product-img" style="background-image: url(<%= buddy.photo %>);"></div>
+  <div class="grid-card-infos">
+    <h2><%= buddy.name %></h2>
+    <h3><%= buddy.category %></h3>
+    <h3> age: # <%= buddy.age  %></h3>
+    <br>
+    <%= link_to "Book #{buddy.name}", buddy_path(buddy), class: "button"  %>
+  </div>
+</div>

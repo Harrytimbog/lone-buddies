@@ -1,0 +1,11 @@
+<div class="buddy_card">
+  <div class="product-img" style="background-image: url(<%= booking.pet.photo %>);">
+  </div>
+  <div  class="grid-card-infos">
+    <h2><%= booking.buddy.name %></h2>
+    <h3><%= booking.buddy.category %></h3>
+    <p>From: <%= booking.start_on %> - To: <%= booking.end_on %></p>
+    <br>
+    <p><%= link_to "details", booking, class: "button" %></p>
+  </div>
+</div>
