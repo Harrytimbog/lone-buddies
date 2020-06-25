@@ -1,6 +1,8 @@
 <div class="testing-card-product">
-  <div class="product-img"style="background-image: url('<%= buddy.photo %>')">
+  <div class="product-img"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @buddy.photo.key, height: 300, width: 400, crop: :fill %>')">
+    Cool photo
   </div>
+
   <div class="testing-card-product-infos">
     <h2><%= buddy.name %></h2>
     <h3><%= buddy.category %></h3>

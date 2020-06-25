@@ -7,7 +7,7 @@
         <%= f.input :description, label: 'How would you describe your buddy?' %>
         <%= f.input :category, label: "What's the category of the buddy?"  %>
         <%= f.input :age, label: "What's your buddie's age?" %>
-        <%= f.file_field :photo, label: 'Add a photo url' %>
+        <%= f.input :photo, as: :file %>
         <%= f.input :address, label: 'Where is your buddy\'s location' %>
         <%= f.submit "Add your buddy!", class: "button"%>
       <% end %>
