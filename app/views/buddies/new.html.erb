@@ -9,8 +9,10 @@
         <%= f.input :age, label: "What's your buddie's age?" %>
         <%= f.input :photo, as: :file %>
         <%= f.input :address, label: 'Where is your buddy\'s location' %>
-        <%= f.submit "Add your buddy!", class: "button"%>
+        <%= f.submit "Add your buddy!", class: "btn btn-primary"%>
       <% end %>
     </div>
+    <%= link_to "back", buddies_path %>
+
   </div>
 </div>

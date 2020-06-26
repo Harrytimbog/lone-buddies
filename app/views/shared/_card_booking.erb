@@ -1,10 +1,14 @@
 <div class="testing-card-product">
-  <div class="product-img"style="background-image: url('<%= booking.buddy.photo %>')">
+  <div class="product-img"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path booking.buddy.photo.key, height: 300, width: 400, crop: :fill %>')">
   </div>
+
   <div class="testing-card-product-infos">
     <h2><%= booking.buddy.name %></h2>
     <h3><%= booking.buddy.category %></h3>
     <p><%= booking.buddy.description %></p>
     <p>From: <%= booking.start_on %> - To: <%= booking.end_on %></p>
+    <%= link_to "back", bookings_path, class: "btn btn-outline-primary" %>
   </div>
+
+
 </div>

@@ -1,2 +1,18 @@
-<h1>Buddies#edit</h1>
-<p>Find me in app/views/buddies/edit.html.erb</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <h1>Add your Buddy here:</h1>
+      <%= simple_form_for [@buddy] do |f|  %>
+        <%= f.input :name, label: 'What is your buddy\'s name?' %>
+        <%= f.input :description, label: 'How would you describe your buddy?' %>
+        <%= f.input :category, label: "What's the category of the buddy?"  %>
+        <%= f.input :age, label: "What's your buddie's age?" %>
+        <%= f.input :photo, as: :file %>
+        <%= f.input :address, label: 'Where is your buddy\'s location' %>
+        <%= f.submit "Update your buddy!", class: "btn btn-primary"%>
+      <% end %>
+    <%= link_to "back", buddies_path %>
+    </div>
+
+  </div>
+</div>
