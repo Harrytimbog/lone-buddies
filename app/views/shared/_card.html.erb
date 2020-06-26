@@ -1,24 +1,30 @@
-<div class="testing-card-product">
-  <div class="product-img"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @buddy.photo.key, height: 300, width: 400, crop: :fill %>')">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8-sm-6">
 
-  </div>
+      <div class="product-img"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @buddy.photo.key, height: 300, width: 400, crop: :fill %>')">
 
-  <div class="testing-card-product-infos">
-    <h2><%= buddy.name %></h2>
-    <h3><%= buddy.category %></h3>
-    <p><%= buddy.description %></p>
-    <h3><%= buddy.age %> years old</h3>
-    <form class="form-inline">
-      <% if @buddy.owner == current_user %>
-        <%= link_to "You already added this buddy!", buddies_path(@buddy), class: "btn btn-info" %>
-        <span>
-          <%= link_to "update", edit_buddy_path, class: "btn btn-outline-success" %>
-        </span>
+      </div>
 
-      <% else %>
-        <p><%= link_to "Engage this buddy", new_buddy_booking_path(@buddy), class: "btn btn-primary" %></p>
-      <% end %>
-    <br>
-    </form>
+      <div class="testing-card-product-infos">
+        <h2><%= buddy.name %></h2>
+        <h3><%= buddy.category %></h3>
+        <p><%= buddy.description %></p>
+        <h3><%= buddy.age %> years old</h3>
+        <form class="form-inline">
+          <% if @buddy.owner == current_user %>
+            <%= link_to "You already added this buddy!", buddies_path(@buddy), class: "btn btn-outline-info" %>
+            <span>
+            <%= link_to "update", edit_buddy_path, class: "btn btn-outline-success" %>
+            </span>
+
+          <% else %>
+            <p><%= link_to "Engage this buddy", new_buddy_booking_path(@buddy), class: "btn btn-primary" %></p>
+          <% end %>
+          <%= link_to "back", buddies_path %>
+        <br>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
