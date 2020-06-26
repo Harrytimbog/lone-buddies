@@ -5,7 +5,6 @@ class CreateBuddies < ActiveRecord::Migration[6.0]
       t.string :description
       t.integer :age
       t.string :category
-      t.string :photo
       t.string :address
       t.references :owner, foreign_key: { to_table: :users }
 

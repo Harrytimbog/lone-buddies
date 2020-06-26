@@ -1,5 +1,7 @@
 <div class="buddy_card">
-  <div class="product-img" style="background-image: url(<%= buddy.photo %>);"></div>
+  <div class="product-img"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path buddy.photo.key, height: 300, width: 400, crop: :fill %>')">
+    Cool photo
+  </div>
   <div class="grid-card-infos">
     <h2><%= buddy.name %></h2>
     <h3><%= buddy.category %></h3>
@@ -8,3 +10,5 @@
     <%= link_to "Book #{buddy.name}", buddy_path(buddy), class: "button"  %>
   </div>
 </div>
+
+

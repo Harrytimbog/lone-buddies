@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 2020_06_24_173008) do
     t.string "description"
     t.integer "age"
     t.string "category"
-    t.string "photo"
     t.string "address"
     t.bigint "owner_id"
     t.datetime "created_at", precision: 6, null: false
