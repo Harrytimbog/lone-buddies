@@ -5,28 +5,22 @@
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: #FFFFF4;
+  color: #111d5e;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color:#A0384D;
+  color:#111d5e;
   opacity: 1;
   text-decoration: none;
   font-size: 28px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
-  opacity: 0.75;
+  opacity: 0.5;
 }
 .footer .fa-heart {
-  color: #A0384D;
-}
-
-.footer-copyright {
- font-family: 'Oswald', sans-serif;
- text-transform: uppercase;
- font-size: 20px;
+  color: #111d5e;
 }
