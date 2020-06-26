@@ -1,5 +1,6 @@
 <div class="buddy_card">
-  <div class="product-img" style="background-image: url(<%= booking.pet.photo %>);">
+  <div class="product-img"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path booking.buddy.photo.key, height: 300, width: 400, crop: :fill %>')">
+    Cool photo
   </div>
   <div  class="grid-card-infos">
     <h2><%= booking.buddy.name %></h2>

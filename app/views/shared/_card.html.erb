@@ -10,9 +10,9 @@
     <h3><%= buddy.age %> years old</h3>
     <form class="form-inline">
       <% if @buddy.owner == current_user %>
-      <p><%= link_to "You already added this buddy!", buddies_path(@buddy), class: "button" %></p>
+        <p><%= link_to "You already added this buddy!", buddies_path(@buddy), class: "button" %></p>
       <% else %>
-      <p><%= link_to "Engage this buddy", new_buddy_booking_path(@buddy), class: "button" %></p>
+        <p><%= link_to "Engage this buddy", new_buddy_booking_path(@buddy), class: "button" %></p>
       <% end %>
     <br>
     </form>
