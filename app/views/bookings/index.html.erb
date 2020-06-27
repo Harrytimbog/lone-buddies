@@ -1,12 +1,16 @@
-<div class="container">
+<div class="container-fluid">
   <div>
     <h1>bookings for meetups with buddy</h1>
       <br>
       <br>
-      <div class='buddy_list'>
-        <% @bookings.each do |booking| %>
-          <%= render "shared/booking_card", booking: booking %>
-        <% end %>
+      <div class='container'>
+        <div class="row">
+          <% @bookings.each do |booking| %>
+            <div class="col-12 col-md-6 col-lg-3">
+              <%= render "shared/booking_card", booking: booking %>
+            </div>
+          <% end %>
+        </div>
       </div>
       <%= link_to "back", buddies_path, class: "btn btn-outline-primary" %>
     </div>
