@@ -38,6 +38,11 @@
   padding: 32px;
 }
 
+.buddy_card {
+  border: 1px #111d5e solid;
+  margin: 12px;
+}
+
 .card-category {
   position: relative;
   background-size: cover;
@@ -55,8 +60,49 @@
   margin: 12px;
 }
 
-.card-description h2, h3 {
+.card-description h4 {
   font-size: 24px;
   font-family: serif;
+  color: #111d5e;
 }
 
+.card-description p {
+  font-size: 16px;
+  font-family: serif;
+  color: #111d5e;
+  border: black 1px, solid;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover {
+  opacity: 0.1;
+}
+
+.card-remove-link {
+  font-size: 16px;
+  color: white;
+  border-radius: 50%;
+  // border: 1px solid white;s
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 0.8;
+  // transform: rotatse(45deg);
+  font-weight: lighter;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+  }
+}
