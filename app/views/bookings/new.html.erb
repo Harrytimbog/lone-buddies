@@ -1,17 +1,18 @@
 <div class="container">
-  <div class="col-md-12">
-    <br>
-    <h1>Place a new Booking</h1>
-    <div class="testing-card-product">
-      <div class="product-img"style="background-image: url('<%= @buddy.photo %>')"></div>
-      <div class="testing-card-product-infos">
-        <h2><%= @buddy.name.capitalize %></h2>
-        <p><%= @buddy.description %></p>
-        <%= simple_form_for [@buddy, @booking] do |f| %>
-          <%= f.input :start_on, label: 'From', as: :string, input_html: {type: :date} %>
-          <%= f.input :end_on, label: 'To', as: :string, input_html: {type: :date} %>
-          <%= f.button :submit, 'Book your meeting now!', class: "button", data: {confirm: "Click OK if you'd like to confirm this booking!"}%>
-        <% end %>
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <h1>Place a new Booking</h1>
+        <div class="product-img"style="background-image: url('<%= @buddy.photo %>')"></div>
+          <h4><%= @buddy.name.capitalize %></h2>
+          <p><%= @buddy.description %></p>
+          <%= simple_form_for [@buddy, @booking] do |f| %>
+            <p><%= f.input :start_on, label: 'From', as: :string, input_html: {type: :date} %></p>
+            <p><%= f.input :end_on, label: 'To', as: :string, input_html: {type: :date} %></p>
+            <p><%= f.button :submit, 'Book your meeting now!', class: "btn btn-primary", data: {confirm: "Click OK if you'd like to confirm this booking!"}%></h4>
+          <% end %>
+          <br>
+          <%= link_to "back", buddies_path %>
+        </div>
       </div>
     </div>
   </div>
