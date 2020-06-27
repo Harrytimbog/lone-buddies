@@ -11,6 +11,7 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <%= link_to "Home", "#", class: "nav-link" %>
+
       </li>
       <li class="nav-item">
         <%= link_to "About", "#", class: "nav-link" %>
@@ -22,6 +23,14 @@
           <%= link_to "Add your buddy", new_buddy_path, class: "dropdown-item" %>
         </div>
       </li>
+      <% if user_signed_in? %>
+      <li class="nav-item">
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+      <li>
+      <% end %>
+
     </ul>
   </div>
 </div>
+
+
