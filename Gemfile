@@ -22,6 +22,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
 gem 'attach'
+gem "pundit"
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
