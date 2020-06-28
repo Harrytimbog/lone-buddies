@@ -17,7 +17,8 @@
               <% if @buddy.owner == current_user %>
                 <%= link_to "You already added this buddy!", buddies_path(@buddy), class: "btn btn-outline-info" %>
                 <span>
-                <%= link_to "update", edit_buddy_path, class: "btn btn-outline-success" %>
+                <%= link_to "Update", edit_buddy_path, class: "btn btn-outline-success" %>
+                <%= link_to "Delete buddy", buddy_path(@buddy), :confirm => 'Are you sure?', :method => :delete, class: "btn btn-outline-danger" %>
                 </span>
 
               <% else %>
