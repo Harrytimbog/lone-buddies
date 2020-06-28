@@ -38,6 +38,10 @@ class BuddiesController < ApplicationController
     redirect_to buddies_path, notice: "Buddy was successfully destroyed"
   end
 
+  def my_own
+    @my_buddies = Buddy.where(owner_id: current_user.id)
+  end
+
   private
 
   def set_buddy

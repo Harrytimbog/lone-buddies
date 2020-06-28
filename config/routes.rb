@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'buddies#index'
+  get "buddies/my_own", to: "buddies#my_own", as: :my_own
+
 
   resources :users, only: [:show]
   resources :buddies do
