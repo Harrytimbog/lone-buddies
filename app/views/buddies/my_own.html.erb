@@ -2,7 +2,9 @@
   <br></br>
   <br></br>
   <div class="container">
+    <%= cl_image_tag @current_user.avatar.key, width: 400, height: 300, crop: :fill %>
     <h3>Hi <%= current_user.nickname || current_user.email %>, here are your buddies:</h3>
+
     <div class="row">
       <% @my_buddies.each do |buddy| %>
       <div class="col-12 col-md-6 col-lg-3">
