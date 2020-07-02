@@ -6,6 +6,12 @@ class BuddiesController < ApplicationController
   end
 
   def show
+    @markers = [
+      {
+        lat: @buddy.latitude,
+        lng: @buddy.longitude
+      }
+    ]
   end
 
   def new
