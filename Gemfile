@@ -21,9 +21,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'dotenv-rails', groups: [:development, :test]
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
-gem 'attach'
 gem "pundit"
-gem 'gravatar_image_tag'
+gem 'geocoder'
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
