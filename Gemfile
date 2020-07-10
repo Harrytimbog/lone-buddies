@@ -23,6 +23,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'redis', '~> 4.0'
 gem "pundit"
 gem 'geocoder'
+gem 'letter_opener', group: :development
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
