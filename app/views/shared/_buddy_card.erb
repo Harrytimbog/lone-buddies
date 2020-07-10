@@ -1,13 +1,12 @@
-<div class="buddy_card">
+<div class="card-trip">
   <div class="card-category"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path buddy.photo.key, height: 300, width: 400, :quality=>"auto", :fetch_format=>:auto %>')">
   </div>
-    <div class="card-description">
+  <div class="card-trip-infos">
+    <div>
       <h4>My name is <%= buddy.name %></h4>
-      <p>I fall into the <%= buddy.category %> category</p>
       <p>I am <%= buddy.age  %> years old</p>
-      <br>
     </div>
+    <%= cl_image_tag buddy.owner.avatar.key, class: "avatar" %>
+  </div>
     <%= link_to "", buddy_path(buddy), class: 'card-link' %>
 </div>
-
-
