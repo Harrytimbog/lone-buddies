@@ -24,6 +24,7 @@ gem 'redis', '~> 4.0'
 gem "pundit"
 gem 'geocoder'
 gem 'letter_opener', group: :development
+gem 'postmark-rails'
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
