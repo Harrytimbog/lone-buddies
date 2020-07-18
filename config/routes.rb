@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'buddies#index'
   get "buddies/my_own", to: "buddies#my_own", as: :my_own
 
+  get 'user/dashboards#show', to: "user/dashboards#show", as: :my_profile
 
   resources :users, only: [:show]
   resources :buddies do

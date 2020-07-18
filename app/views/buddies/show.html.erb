@@ -1,6 +1,6 @@
 <div class="m-3">
   <h3><%= cl_image_tag @buddy.owner.avatar.key, class: "avatar" %></h3>
-  <p><%= @buddy.name %> is <%= @buddy.owner.nickname %>'s buddy</p>
+  <p><%= @buddy.name %> is <%= link_to @buddy.owner.nickname %>'s buddy</p>
 </div>
 <p><%= render "shared/card", buddy: @buddy %> </p>
 <div data-turbolinks="false">
