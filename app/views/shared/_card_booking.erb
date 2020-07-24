@@ -7,7 +7,7 @@
 
         <div class="card-description">
           <p><%= booking.buddy.name %> is an awesome fella. This <%= booking.buddy.category %> has thus has been booked by you </h2>
-          <p>From: <%= booking.start_on %> - To: <%= booking.end_on %></p>
+          <p>From: <%= booking.start_on.strftime("%a %b %e at %l:%M%p") %> - To: <%= booking.end_on.strftime("%a %b %e at %l:%M%p") %></p>
           <div class="p-2">
             <%= link_to "back", bookings_path, class: "btn btn-outline-primary" %>
           </div>
