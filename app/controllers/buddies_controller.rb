@@ -36,7 +36,7 @@ class BuddiesController < ApplicationController
     if @buddy.update(buddy_params)
       redirect_to buddy_path(@buddy), notice: 'Buddy was successfully updated.'
     else
-      redirect_to @restaurant
+      redirect_to @buddy
     end
   end
 
